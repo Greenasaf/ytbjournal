@@ -25,12 +25,12 @@ jobs:
         run: pip install -U yt-dlp
 
       - name: Run fetch script
-        run: python fetch_streams.py || true
+        run: python ytb.py || true
 
-      - name: Commit and push streams.json
+      - name: Commit and push ytb.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f streams.json
-          git diff --cached --quiet && git diff --quiet || git commit -m "chore: update streams.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git add -f ytb.json
+          git diff --cached --quiet && git diff --quiet || git commit -m "chore: update ytb.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git push
