@@ -1,29 +1,53 @@
 {
-  "updated_at": "never",
+  "updated_at": "2026-05-31T12:25:18Z",
   "channels": {
     "CNN Turk": {
       "source_url": "https://www.youtube.com/@cnnturk/live",
       "stream_url": null,
-      "status": "pending",
-      "error": null
+      "status": "error",
+      "error": "ERROR: [youtube] 9HcjqVLCXUM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "NTV Haber": {
       "source_url": "https://www.youtube.com/@NTV/live",
       "stream_url": null,
-      "status": "pending",
-      "error": null
+      "status": "error",
+      "error": "ERROR: [youtube] pqq5c6k70kk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "TGRT Haber": {
       "source_url": "https://www.youtube.com/@TGRTHaber/live",
       "stream_url": null,
-      "status": "pending",
-      "error": null
+      "status": "error",
+      "error": "ERROR: [youtube] 0SAUIyvNA5s: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "Haber Global": {
       "source_url": "https://www.youtube.com/@HaberGlobal/live",
       "stream_url": null,
-      "status": "pending",
-      "error": null
+      "status": "error",
+      "error": "ERROR: [youtube] EqoCJ8BPxtE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "Haberturk": {
       "source_url": "https://www.youtube.com/@haberturk/live",
+      "stream_url": null,
+      "status": "error",
+      "error": "ERROR: [youtube:tab] @haberturk: The channel is not currently live"
+    },
+    "TV100": {
+      "source_url": "https://www.youtube.com/@tv100/live",
+      "stream_url": null,
+      "status": "error",
+      "error": "ERROR: [youtube] ebVRSmBYC60: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    "Sozcu TV": {
+      "source_url": "https://www.youtube.com/@sozcutv/live",
+      "stream_url": null,
+      "status": "error",
+      "error": "ERROR: [youtube:tab] @sozcutv: Unable to download API page: HTTP Error 404: Not Found (caused by <HTTPError 404: Not Found>)"
+    },
+    "TRT Haber": {
+      "source_url": "https://www.youtube.com/@TRTHaber/live",
+      "stream_url": null,
+      "status": "error",
+      "error": "ERROR: [youtube] a9aEQhgQJ4Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    }
+  }
+}
