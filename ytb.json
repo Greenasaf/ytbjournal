@@ -1,0 +1,53 @@
+{
+  "updated_at": "never",
+  "channels": {
+    "CNN Turk": {
+      "source_url": "https://www.youtube.com/@cnnturk/live",
+      "stream_url": null,
+      "status": "pending",
+      "error": null
+    },
+    "NTV Haber": {
+      "source_url": "https://www.youtube.com/@NTV/live",
+      "stream_url": null,
+      "status": "pending",
+      "error": null
+    },
+    "TGRT Haber": {
+      "source_url": "https://www.youtube.com/@TGRTHaber/live",
+      "stream_url": null,
+      "status": "pending",
+      "error": null
+    },
+    "Haber Global": {
+      "source_url": "https://www.youtube.com/@HaberGlobal/live",
+      "stream_url": null,
+      "status": "pending",
+      "error": null
+    },
+    "Haberturk": {
+      "source_url": "https://www.youtube.com/@haberturk/live",
+      "stream_url": null,
+      "status": "pending",
+      "error": null
+    },
+    "TV100": {
+      "source_url": "https://www.youtube.com/@tv100/live",
+      "stream_url": null,
+      "status": "pending",
+      "error": null
+    },
+    "Sozcu TV": {
+      "source_url": "https://www.youtube.com/@sozcutv/live",
+      "stream_url": null,
+      "status": "pending",
+      "error": null
+    },
+    "TRT Haber": {
+      "source_url": "https://www.youtube.com/@TRTHaber/live",
+      "stream_url": null,
+      "status": "pending",
+      "error": null
+    }
+  }
+}
