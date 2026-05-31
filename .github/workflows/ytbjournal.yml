@@ -25,7 +25,7 @@ jobs:
         run: pip install -U yt-dlp
 
       - name: Run fetch script
-        run: python fetch_streams.py
+        run: python fetch_streams.py || true
 
       - name: Commit and push streams.json
         run: |
