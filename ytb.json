@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-05-31T15:36:54Z",
+  "updated_at": "2026-05-31T19:20:28Z",
   "channels": {
     "CNN Turk": {
       "source_url": "https://www.youtube.com/@cnnturk/live",
       "stream_url": null,
       "status": "error",
-      "error": "ERROR: [youtube] 9HcjqVLCXUM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+      "error": "ERROR: [youtube] rLqWSfEwlH0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "NTV Haber": {
       "source_url": "https://www.youtube.com/@NTV/live",
@@ -17,13 +17,13 @@
       "source_url": "https://www.youtube.com/@TGRTHaber/live",
       "stream_url": null,
       "status": "error",
-      "error": "ERROR: [youtube] 0SAUIyvNA5s: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+      "error": "ERROR: [youtube] _8B-ZRi-klI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "Haber Global": {
       "source_url": "https://www.youtube.com/@HaberGlobal/live",
       "stream_url": null,
       "status": "error",
-      "error": "ERROR: [youtube] EqoCJ8BPxtE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+      "error": "ERROR: [youtube] aRve9xxh2kM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "Haberturk": {
       "source_url": "https://www.youtube.com/@haberturk/live",
@@ -35,7 +35,7 @@
       "source_url": "https://www.youtube.com/@tv100/live",
       "stream_url": null,
       "status": "error",
-      "error": "ERROR: [youtube] 07UVIgpPLi8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+      "error": "ERROR: [youtube] ewPYWuFWEQU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "Sozcu TV": {
       "source_url": "https://www.youtube.com/@sozcutv/live",
