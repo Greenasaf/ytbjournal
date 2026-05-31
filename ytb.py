@@ -16,14 +16,25 @@ CHANNELS = {
 def get_stream_url(channel_url):
     try:
         result = subprocess.run(
-            ["yt-dlp", "--no-playlist", "-g", channel_url],
+            [
+                "yt-dlp",
+                "--no-playlist",
+                "--no-warnings",
+                "-f", "95/94/93/92/best",
+                "-g",
+                channel_url,
+            ],
             capture_output=True,
             text=True,
-            timeout=60,
+            timeout=90,
         )
         if result.returncode == 0 and result.stdout.strip():
-            url = result.stdout.strip().splitlines()[0]
-            return {"status": "ok", "url": url, "error": None}
+            lines = [l.strip() for l in result.stdout.strip().splitlines() if l.strip()]
+            url = lines[-1]
+            if url.startswith("http"):
+                return {"status": "ok", "url": url, "error": None}
+            else:
+                return {"status": "error", "url": None, "error": "Invalid URL returned"}
         else:
             err = result.stderr.strip().splitlines()[-1] if result.stderr.strip() else "No output"
             return {"status": "error", "url": None, "error": err}
@@ -62,13 +73,15 @@ def main():
     m3u_lines = ["#EXTM3U"]
     for name, data in output["channels"].items():
         if data["status"] == "ok" and data["stream_url"]:
-            m3u_lines.append(f'#EXTINF:-1,{name}')
+            m3u_lines.append(f"#EXTINF:-1,{name}")
             m3u_lines.append(data["stream_url"])
 
     with open("ytb.m3u", "w", encoding="utf-8") as f:
         f.write("\n".join(m3u_lines) + "\n")
 
-    print(f"\nSaved to ytb.json and ytb.m3u at {output['updated_at']}")
+    ok_count = sum(1 for d in output["channels"].values() if d["status"] == "ok")
+    print(f"\nDone: {ok_count}/{len(CHANNELS)} channels OK")
+    print(f"Saved ytb.json and ytb.m3u at {output['updated_at']}")
 
 
 if __name__ == "__main__":
