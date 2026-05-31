@@ -59,7 +59,16 @@ def main():
     with open("ytb.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSaved to ytb.json at {output['updated_at']}")
+    m3u_lines = ["#EXTM3U"]
+    for name, data in output["channels"].items():
+        if data["status"] == "ok" and data["stream_url"]:
+            m3u_lines.append(f'#EXTINF:-1,{name}')
+            m3u_lines.append(data["stream_url"])
+
+    with open("ytb.m3u", "w", encoding="utf-8") as f:
+        f.write("\n".join(m3u_lines) + "\n")
+
+    print(f"\nSaved to ytb.json and ytb.m3u at {output['updated_at']}")
 
 
 if __name__ == "__main__":
