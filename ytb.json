@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-01T04:19:35Z",
+  "updated_at": "2026-06-01T11:40:14Z",
   "channels": {
     "CNN Turk": {
       "source_url": "https://www.youtube.com/@cnnturk/live",
       "stream_url": null,
       "status": "error",
-      "error": "ERROR: [youtube] hd_8CFh8lew: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+      "error": "ERROR: [youtube] 7i0t7C7foSA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "NTV Haber": {
       "source_url": "https://www.youtube.com/@NTV/live",
@@ -17,7 +17,7 @@
       "source_url": "https://www.youtube.com/@TGRTHaber/live",
       "stream_url": null,
       "status": "error",
-      "error": "ERROR: [youtube] vNlRVu4OEps: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+      "error": "ERROR: [youtube] 0SAUIyvNA5s: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
     },
     "Haber Global": {
       "source_url": "https://www.youtube.com/@HaberGlobal/live",
