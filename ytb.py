@@ -1,25 +1,26 @@
 """
-YouTube JSON to IPTV M3U Generator
+YouTube JSON to IPTV M3U Generator (with cookie support)
 
 This script reads channel information from a YouTube live stream JSON,
-uses streamlink and/or yt-dlp to extract m3u8/HLS stream URLs,
-and generates a .m3u file compatible with IPTV players.
+uses streamlink and/or yt-dlp (with optional cookies) to extract m3u8/HLS
+stream URLs, and generates a .m3u file compatible with IPTV players.
 
 Requirements:
   pip install streamlink yt-dlp
+  yt-dlp --cookies-from-browser chrome "https://www.youtube.com/@cnnturk/live" --cookies cookies.txt "https://www.youtube.com/@cnnturk/live"
 
 Usage:
   python ytb.py
 
 JSON file: channels.json (in the same directory)
 Output: channels.m3u
+Cookie file: cookies.txt (optional, in the same directory)
 """
 
 import json
 import os
 import sys
 
-# Optional imports for streamlink and yt-dlp
 try:
     import streamlink
     HAS_STREAMLINK = True
@@ -33,7 +34,18 @@ except ImportError:
     HAS_YTDL = False
 
 
-def get_streamlink_stream_url(url):
+def get_cookie_file():
+    """
+    Returns cookie file path if it exists.
+    Looks for 'cookies.txt' in the current directory.
+    """
+    cookie_path = "cookies.txt"
+    if os.path.exists(cookie_path):
+        return cookie_path
+    return None
+
+
+def get_streamlink_stream_url(url, cookie_path=None):
     """Returns the best stream URL using streamlink."""
     if not HAS_STREAMLINK:
         return None
@@ -49,8 +61,8 @@ def get_streamlink_stream_url(url):
     return None
 
 
-def get_ytdlp_stream_url(url):
-    """Returns HLS/m3u8 URL using yt-dlp."""
+def get_ytdlp_stream_url(url, cookie_path=None):
+    """Returns HLS/m3u8 URL using yt-dlp with optional cookie support."""
     if not HAS_YTDL:
         return None
 
@@ -61,6 +73,9 @@ def get_ytdlp_stream_url(url):
         "format": "best",
         "dump_json": True,
     }
+
+    if cookie_path:
+        ydl_opts["cookiefile"] = cookie_path
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -87,13 +102,15 @@ def get_ytdlp_stream_url(url):
 def get_stream_url(url):
     """
     Returns live stream URL (m3u8, etc.) from the given URL.
-    Tries streamlink first, then yt-dlp.
+    Tries streamlink first, then yt-dlp with optional cookie.
     """
-    stream_url = get_streamlink_stream_url(url)
+    cookie_path = get_cookie_file()
+
+    stream_url = get_streamlink_stream_url(url, cookie_path)
     if stream_url:
         return stream_url
 
-    stream_url = get_ytdlp_stream_url(url)
+    stream_url = get_ytdlp_stream_url(url, cookie_path)
     if stream_url:
         return stream_url
 
@@ -120,6 +137,14 @@ def json_to_m3u(json_path="channels.json", m3u_path="channels.m3u"):
     if not os.path.exists(json_path):
         print(f"Error: {json_path} file not found.")
         sys.exit(1)
+
+    cookie_path = get_cookie_file()
+    if cookie_path:
+        print(f"Using cookie file: {cookie_path}")
+    else:
+        print("Warning: cookies.txt not found. YouTube streams may fail due to bot detection.")
+        print("To create cookies.txt, run:")
+        print('  yt-dlp --cookies-from-browser chrome "https://www.youtube.com/@cnnturk/live" --cookies cookies.txt "https://www.youtube.com/@cnnturk/live"')
 
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
